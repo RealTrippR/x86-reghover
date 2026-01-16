@@ -1,4 +1,6 @@
-# reghover README
+# reghover 
+
+<hr>
 
 Reghover is a vscode extension that improves x86 assembly debugging by allowing for registers to be quickly inspected by hovering over them.
 
