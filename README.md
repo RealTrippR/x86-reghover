@@ -14,6 +14,7 @@ It is recommended that you install NASM syntax highlighting [See Here](https://m
 When hovering over a register, 2 keybinds are automatically enabled:
 
 E - Toggles whether registers should be treated as a pointer and its memory contents shown.
+
 Q - If pointer inpsection mode is toggled, this changes whether the contents at the address of the
     current pointer should be displayed as a string or shown as hex values.
 
