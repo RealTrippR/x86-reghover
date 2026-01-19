@@ -31,6 +31,18 @@
         "label": "ASM Debugger",
         "languages": ["asm", "s", "nasm", "assembly", "asm-intel-x86-generic"]
       }
+    ],
+    "keybindings": [
+      {
+        "command": "asmHover.inspectmode",
+        "key": "e",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "asmHover.nextmode",
+        "key": "q",
+        "when": "editorTextFocus"
+      }
     ]
   },
   "scripts": {

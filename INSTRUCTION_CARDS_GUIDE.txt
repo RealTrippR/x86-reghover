@@ -1,0 +1,47 @@
+About
+
+    Instruction cards are a way to represent the functionality and inputs of a machine instruction/
+
+    The instruction card syntax is simple and fairly straightforward. It supports a number of simple
+    properties and limited conditional branching.
+
+Properties
+    @name "name"
+        --  Registers the name of the instruction. 
+    @brief "description"
+        --  Registers a brief overview of the instruction. 
+    @description "description"
+        --  Registers the description of the instruction. 
+    @show [reg]
+        --  Specifies what registers should be displayed upon hovering over the instruction.
+        --  'reg' can be a single register or a pair of two registers 'reg1:reg2'
+        
+        example:
+            @show dx:ax, cx
+
+
+Operators
+    size(register)  
+        -- returns the size of a given register
+
+    argc
+        -- the number of arguments in the argument array.
+
+    args[]
+        --  an array of arguments to the instruction. 
+            For example, the instruction 'add ax, bx' would result in an argument array of [ax, bx]
+
+Conditionals
+    Properties can be changed, added, or omitted via the use of conditionals.
+
+    For example:
+
+    if size(args[0]) = 1 {
+        @brief "Multiplies ax by {args[0]}."
+    }
+    elif(size(args[0] = 2)) {
+        @brief "Multiplies dx:ax by {args[0]}."
+    }
+    else {
+
+    }

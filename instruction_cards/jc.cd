@@ -1,0 +1,4 @@
+@name "jnc"
+@brief "Jump if carry"
+@description "Jumps to the specified address if the carry flag is set."
+@show CF

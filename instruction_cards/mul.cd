@@ -1,0 +1,17 @@
+@name "mul"
+if size(args[0]) == 1 {
+    @brief "Multiplies ax by {args[0]}."
+    @show ax, args[0]
+}
+elif size(args[0]) == 2 {
+    @brief "Multiplies dx:ax by {args[0]}."
+    @show dx:ax, ax:args[0]
+} 
+elif size(args[0]) == 4 {
+    @brief "Multiples "
+    @description "Jumps "
+} 
+elif size(args[0]) == 8 {
+    @brief "Multiples "
+    @description "Jumps "
+} 
