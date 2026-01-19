@@ -453,7 +453,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 
 				// I couldn't get this to work since vscode will not call for a hover provider if the current label is a symbol found by the debugger.
-				
+				// also; i'd have to get the length of a symbol to inspect it properly; and i have no idea how to do that.
 				//const varname = document.getText(wordRange).toLowerCase();
 				// const label = await try_var_hover('i32_limit_a');
 				// //console.log("label:", varname);
