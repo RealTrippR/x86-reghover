@@ -4,6 +4,7 @@
     "type": "git",
     "url": "https://github.com/RealTrippR/x86-reghover"
   },
+  "icon": "logo.png",
   "name": "reghover",
   "displayName": "x86 reghover",
   "description": "Inspect registers by hovering over them, and view pointer contents in a flash",
