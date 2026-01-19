@@ -343,7 +343,6 @@ export function activate(context: vscode.ExtensionContext) {
 			return;
 		}
 		inspecting = !inspecting;
-		vscode.window.showInformationMessage("Key pressed while hover active!");
 	});
 
 	vscode.commands.registerCommand('asmHover.nextmode', () => {
@@ -355,7 +354,6 @@ export function activate(context: vscode.ExtensionContext) {
 		if (inspectModeIdx === inspectModes.length) {
 			inspectModeIdx = 0;
 		}
-		//vscode.window.showInformationMessage("Key pressed while hover active!");
 	});
 
 	vscode.window.onDidChangeTextEditorSelection(() => {
@@ -374,7 +372,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 	// Use the console to output diagnostic information (console.log) and errors (console.error)
 	// This line of code will only be executed once when your extension is activated
-	vscode.window.showInformationMessage('REGHOVER is active!');
+	//vscode.window.showInformationMessage('REGHOVER is active!');
 
 
 	vscode.languages.setLanguageConfiguration('nasm', {

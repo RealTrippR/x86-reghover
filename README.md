@@ -7,7 +7,7 @@ Currently Reghover only supports NASM syntax but may be expanded to work with ov
 
 ## Requirements
 
-It is recommended that you install NASM syntax highlighting [See Here](https://marketplace.visualstudio.com/items?itemName=LucianIrsigler.nasm "Nasm x86_64 syntax highlighting") for the best experience.
+It is recommended that you install NASM syntax highlighting [[See Here](https://marketplace.visualstudio.com/items?itemName=LucianIrsigler.nasm "Nasm x86_64 syntax highlighting")] for the best experience.
 
 ## Keybinds
 
