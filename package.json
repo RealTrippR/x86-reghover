@@ -17,7 +17,6 @@
   "activationEvents": [
     "onLanguage:asm",
     "onLanguage:nasm",
-    "onLanguage:arm",
     "onLanguage:x86asm",
     "onLanguage:assembly",
     "onLanguage:asm-intel-x86-generic"

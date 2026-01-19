@@ -5,6 +5,8 @@ Reghover is a vscode extension that improves x86 assembly debugging by allowing 
 
 Currently Reghover only supports NASM syntax but may be expanded to work with over assemblers and instruction sets in the future.
 
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnhyZGtoYml0YzR4OXlpa2ZjbXZ6NXFvZnNtb2d3dHJ2dW41cGs3bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1HcmI0FTgTEjOuEPVl/giphy.gif)
+
 ## Requirements
 
 It is recommended that you install NASM syntax highlighting [[See Here](https://marketplace.visualstudio.com/items?itemName=LucianIrsigler.nasm "Nasm x86_64 syntax highlighting")] for the best experience.
