@@ -12,11 +12,13 @@ enum mem_display_type {
 
 
 const REGISTER_REGEX =
-    /\b(rax|rbx|rcx|rdx|eax|ebx|ecx|edx|r8|r9|r10|r11|r12|r13|r14|r15|r8w|r9w|r10w|r11w|r12w|r13w|r14w|r15w|r8d|r9d|r10d|r11d|r12d|r13d|r14d|r15d|r8b|r9b|r10b|r11b|r12b|r13b|r14b|r15b|ax|bx|cx|dx|si|di|bp|sp|cs|ds|es|ss|ah|al|bh|bl|ch|cl|dh|dl)\b/i;
-
+    /\b(rsp|rbp|ebp|esp|bp|sp|rax|rbx|rcx|rdx|eax|ebx|ecx|edx|r8|r9|r10|r11|r12|r13|r14|r15|r8w|r9w|r10w|r11w|r12w|r13w|r14w|r15w|r8d|r9d|r10d|r11d|r12d|r13d|r14d|r15d|r8b|r9b|r10b|r11b|r12b|r13b|r14b|r15b|ax|bx|cx|dx|si|di|bp|sp|cs|ds|es|ss|ah|al|bh|bl|ch|cl|dh|dl)\b/i;
 
 const INSTRUCTION_REGEX = 
     /\b(jnc|stc|clc|jc)\b/i;
+
+
+const HOVER_CONTEXT = 'reghover.hoverActive';
 
 
 function randomHex(bytes: number): string {
@@ -358,6 +360,11 @@ export function activate(context: vscode.ExtensionContext) {
 
 	vscode.window.onDidChangeTextEditorSelection(() => {
 		hoverActive = false;
+		vscode.commands.executeCommand(
+			'setContext',
+			'reghover.hoverActive',
+			false
+		);
 	});
 
 
@@ -388,6 +395,13 @@ export function activate(context: vscode.ExtensionContext) {
     const hoverProvider: vscode.HoverProvider = {
         async provideHover(document, position) {
 			hoverActive=true;
+
+			vscode.commands.executeCommand(
+				'setContext',
+				'reghover.hoverActive',
+				true
+			);
+			
             const range = document.getWordRangeAtPosition(position, REGISTER_REGEX);
             if (range) {
 
