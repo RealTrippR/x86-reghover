@@ -30,6 +30,8 @@ Reghover can only inspect memory addresses if the active debugger is GDB compati
 
 Implement instruction cards. See INSTRUCTION_CARDS_GUIDE.txt for more information on this.
 
+## Changelog
+
 ### 0.0.1 [1/16/2026]
     Initial prototype
 
