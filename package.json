@@ -4,7 +4,7 @@
       "type": "git",
       "url": "https://github.com"
   },
-  "name": "x86_reghover",
+  "name": "reghover",
   "displayName": "x86 reghover",
   "description": "Inspect registers by hovering over them, and view pointer contents in a flash",
   "version": "0.0.1",

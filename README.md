@@ -36,3 +36,8 @@ Implement instruction cards. See INSTRUCTION_CARDS_GUIDE.txt for more informatio
     
 ### 0.0.2 [1/18/2026]
     Initial public beta release
+
+
+
+**Copyright (C), 2025 - Tripp R. All rights reserved.**
+Published Under the **Robins Free of Charge & Open Source Public License 25**
