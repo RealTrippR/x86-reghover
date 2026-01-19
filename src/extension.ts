@@ -2,6 +2,8 @@
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 
+// https://code.visualstudio.com/api/ux-guidelines/overview
+
 enum mem_display_type {
 	hex,
 	ascii,
@@ -246,11 +248,12 @@ async function updateRegisters() {
 	}
 }
 
+// I couldn't get this to work since vscode will not call for a hover provider if the current label is a symbol found by the debugger.
 async function try_var_hover(var_name: string): Promise<LabelInfo | undefined> {
 	const label = new LabelInfo();
 	try {
 		//const resp = await vscode.commands.executeCommand('info address i32_limit_a');
-		const resp = await sendGdbCommand(`info address i32_limit_a`);
+		const resp = await sendGdbCommand(`info address ${var_name}`);
 		const resp2 = await sendGdbCommand(`x/32xb &${var_name}`);
 		
 		//console.log("ADDR:",  resp);
@@ -449,19 +452,22 @@ export function activate(context: vscode.ExtensionContext) {
 				};
 
 
-				const varname = document.getText(wordRange).toLowerCase();
-				const label = await try_var_hover('i32_limit_a');
-				//console.log("label:", varname);
+				// I couldn't get this to work since vscode will not call for a hover provider if the current label is a symbol found by the debugger.
+				
+				//const varname = document.getText(wordRange).toLowerCase();
+				// const label = await try_var_hover('i32_limit_a');
+				// //console.log("label:", varname);
 
-				if (label !== undefined) {
-					return new vscode.Hover(
-						new vscode.MarkdownString(
-							`**${label}**`
-						)
-					);
-				} else {
-					return null;
-				}
+				// if (label !== undefined) {
+				// 	return new vscode.Hover(
+				// 		new vscode.MarkdownString(
+				// 			`**${label}**`
+				// 		)
+				// 	);
+				// } else {
+				// 	return null;
+				// }
+				return null
 			}
 		}
     };

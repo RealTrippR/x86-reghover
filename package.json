@@ -1,7 +1,12 @@
 {
-  "name": "reghover",
-  "displayName": "reghover",
-  "description": "Inspect registers by hovering over them",
+  "publisher": "TrippR",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com"
+  },
+  "name": "x86_reghover",
+  "displayName": "x86 reghover",
+  "description": "Inspect registers by hovering over them, and view pointer contents in a flash",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.108.1"
@@ -29,7 +34,13 @@
       {
         "type": "asmdbg",
         "label": "ASM Debugger",
-        "languages": ["asm", "s", "nasm", "assembly", "asm-intel-x86-generic"]
+        "languages": [
+          "asm",
+          "s",
+          "nasm",
+          "assembly",
+          "asm-intel-x86-generic"
+        ]
       }
     ],
     "keybindings": [
@@ -54,13 +65,14 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.108.1",
     "@types/mocha": "^10.0.10",
     "@types/node": "22.x",
-    "typescript-eslint": "^8.52.0",
+    "@types/vscode": "^1.108.1",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2",
+    "esbuild": "^0.27.2",
     "eslint": "^9.39.2",
     "typescript": "^5.9.3",
-    "@vscode/test-cli": "^0.0.12",
-    "@vscode/test-electron": "^2.5.2"
+    "typescript-eslint": "^8.52.0"
   }
 }

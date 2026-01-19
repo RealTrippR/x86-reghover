@@ -10,6 +10,17 @@ Currently Reghover only supports NASM syntax but may be expanded to work with ov
 
 It is recommended that you install NASM syntax highlighting [See Here](https://marketplace.visualstudio.com/items?itemName=LucianIrsigler.nasm "Nasm x86_64 syntax highlighting") for the best experience.
 
+## Keybinds
+
+When hovering over a register, 2 keybinds are automatically enabled:
+
+E - Toggles whether registers should be treated as a pointer and its memory contents shown.
+Q - If pointer inpsection mode is toggled, this changes whether the contents at the address of the
+    current pointer should be displayed as a string or shown as hex values.
+
+
+
+
 ## Known limitations
 
 Reghover will enable the workspace setting 'Allow breakpoints anywhere'. Otherwise, you wouldn't be able to set breakpoints in assembly code.
