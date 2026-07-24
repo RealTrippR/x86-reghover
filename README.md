@@ -3,7 +3,7 @@
 
 Reghover is a vscode extension that improves x86 assembly debugging by allowing for registers to be quickly inspected by hovering over them.
 
-Currently Reghover only supports NASM syntax but may be expanded to work with over assemblers and instruction sets in the future.
+Currently Reghover only supports NASM syntax but may be expanded to work with other assemblers and instruction sets in the future.
 
 ![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnhyZGtoYml0YzR4OXlpa2ZjbXZ6NXFvZnNtb2d3dHJ2dW41cGs3bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1HcmI0FTgTEjOuEPVl/giphy.gif)
 
